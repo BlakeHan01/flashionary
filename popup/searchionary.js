@@ -33,3 +33,14 @@ function getSourceAsDOM(url)
     parser=new DOMParser();
     return parser.parseFromString(xmlhttp.responseText,"text/html");      
 }
+
+// Task: allow user to search input with ENTER key
+var input = document.getElementById("word");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    document.getElementById("search").click();
+  }
+});
